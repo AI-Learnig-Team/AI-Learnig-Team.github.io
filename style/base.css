@@ -1,3 +1,16 @@
+html {
+	height: 100%;
+}
+
+body {
+	height: calc(100% - 30px);
+}
+
+header {
+	border-bottom: solid 1px #a9a1a1;
+    height: 80px;
+}
+
 body > * {
     display: flex;
     justify-content: center;
@@ -7,10 +20,15 @@ body > * {
 
 content {
 	justify-content: space-evenly;
+	height: calc(100% - 140px);
+    align-items: flex-start;
 }
 
 .ilustration {
 	width: 30%;
+    height: 100%;
+    background-color: #eeeeee;
+    border-radius: 10px;
 }
 
 .ilustration img {
@@ -18,18 +36,23 @@ content {
 }
 
 .conspect {
-	width: 50%;
+	width: 55%;
 }
 
 @media (max-width: 1000px) {
 	body > * {
 		display: inherit;
 		margin: 30px;
-		font-size: 30px;
+		font-size: 35px;
 	}
 	
-	header {
+	header, h2	{
 		text-align: center;
+		height: initial;
+	}
+	
+	content{
+		height: initial;
 	}
 	
 	.ilustration {
