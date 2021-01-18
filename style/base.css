@@ -39,6 +39,18 @@ content {
 	width: 55%;
 }
 
+a {
+    text-decoration: none;
+    color: #1C2B8A;
+}
+
+li {
+    margin-top: 15px;
+    border: solid 1px;
+    padding: 10px;
+    box-shadow: 1px 1px 3px -1px #1C2B8A;
+}
+
 @media (max-width: 1000px) {
 	body > * {
 		display: inherit;
@@ -62,5 +74,9 @@ content {
 	.conspect{
 		width: 90%;
 		margin: auto;
+	}
+	
+	li {
+		margin-top: 30px;
 	}
 }
