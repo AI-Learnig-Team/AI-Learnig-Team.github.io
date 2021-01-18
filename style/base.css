@@ -1,0 +1,22 @@
+body > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+content {
+	justify-content: space-evenly;
+}
+
+.ilustration {
+	width: 30%;
+}
+
+.ilustration img {
+	width: 100%;
+}
+
+.conspect {
+	width: 50%;
+}
