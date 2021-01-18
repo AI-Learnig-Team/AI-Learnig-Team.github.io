@@ -20,3 +20,24 @@ content {
 .conspect {
 	width: 50%;
 }
+
+@media (max-width: 1000px) {
+	body > * {
+		display: inherit;
+		margin: 30px;
+		font-size: 30px;
+	}
+	
+	header {
+		text-align: center;
+	}
+	
+	.ilustration {
+		width: 100%;
+	}
+	
+	.conspect{
+		width: 90%;
+		margin: auto;
+	}
+}
