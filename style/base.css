@@ -1,9 +1,15 @@
+@font-face {
+ font-family: "Open Sans";
+ src: url("../font/OpenSans-Light.ttf") format("opentype");
+}
+
 html {
 	height: 100%;
 }
 
 body {
 	height: calc(100% - 30px);
+	font-family: "Open Sans";
 }
 
 header {
