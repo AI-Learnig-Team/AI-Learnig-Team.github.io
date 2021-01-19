@@ -27,7 +27,7 @@ body > * {
 
 content {
 	justify-content: space-evenly;
-	height: calc(100% - 140px);
+	height: calc(100% - 202px);;
     align-items: flex-start;
 }
 
@@ -46,6 +46,13 @@ content {
 	width: 55%;
 }
 
+footer {
+	height: 40px;
+    border-top: solid 1px #ccc;
+    justify-content: space-between;
+    padding: 10px;
+}
+
 a {
     text-decoration: none;
     color: #1C2B8A;
@@ -56,6 +63,17 @@ li {
     border: solid 1px;
     padding: 10px;
     box-shadow: 1px 1px 3px -1px #1C2B8A;
+}
+
+.logo {
+	height: 100%;
+    justify-content: flex-start;
+    margin-right: 20px;
+}
+
+.logo img {
+	height: 100%;
+    object-fit: contain;
 }
 
 @media (max-width: 1000px) {
@@ -85,5 +103,9 @@ li {
 	
 	li {
 		margin-top: 30px;
+	}
+	
+	footer {
+		text-align: center;
 	}
 }
