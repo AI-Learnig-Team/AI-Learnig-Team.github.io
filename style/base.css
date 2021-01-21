@@ -1,6 +1,11 @@
 @font-face {
  font-family: "Open Sans";
- src: url("../font/OpenSans-Light.ttf") format("opentype");
+ src: url("../fonts/OpenSans-Light.ttf") format("opentype");
+}
+
+@font-face {
+ font-family: "Mono Code";
+ src: url("../fonts/JetBrainsMono-Light.ttf") format("opentype");
 }
 
 html {
@@ -30,13 +35,12 @@ header, h1{
 }
 
 content {
-	justify-content: space-evenly;
-	height: calc(100% - 180px);;
-    align-items: flex-start;
+	justify-content: flex-start;
+	height: calc(100% - 180px);
 }
 
 .ilustration {
-	width: 30%;
+	width: calc(25% - 30px);
     height: 100%;
     background-color: #eeeeee;
     border-radius: 10px;
@@ -48,9 +52,20 @@ content {
 }
 
 .conspect {
-	width: 55%;
+	width: calc(70% - 30px);
 	height: 100%;
 	overflow: auto;
+	display: flex;
+    justify-content: center;
+}
+
+.conspect_content{
+	max-width: 960px;
+}
+
+.ilustration,
+.conspect{
+	margin-left: 30px;
 }
 
 footer {
@@ -69,11 +84,12 @@ ol{
 	padding: 0;
 }
 
-li {
+ol li {
     margin-top: 15px;
     border: solid 1px;
     padding: 10px;
     box-shadow: 1px 1px 3px -1px #1C2B8A;
+	list-style: none;
 }
 
 .logo {
@@ -97,6 +113,50 @@ li {
 
 ::-webkit-scrollbar-thumb {
   background: c3bebe; 
+}
+
+.command, .term {
+	font-size: 110%;
+    color: #8429c6;
+}
+
+.command{
+    font-weight: bolder;
+}
+
+.term{
+    font-style: italic;
+}
+
+.sourse_code{
+	background: #2B2B2B;
+    padding: 30px;
+    color: #A9B7C6;
+    font-family: Mono Code;
+}
+
+.keyword{
+	color: #CC7832;
+}
+
+.comment{
+	color: #72737A;
+}
+.number{
+	color: #6897BB;
+}
+
+table{
+	border-collapse: collapse;
+}
+
+tr:nth-child(2n - 1) {
+    background: #eee;
+}
+
+td {
+    text-align: center;
+    padding: 5px;
 }
 
 @media (max-width: 1000px) {
@@ -124,6 +184,10 @@ li {
 		margin: auto;
 	}
 	
+	.ilustration{
+		margin-left: 0px;
+	}
+	
 	li {
 		margin-top: 30px;
 	}
@@ -131,4 +195,6 @@ li {
 	footer {
 		text-align: center;
 	}
+	
+	
 }

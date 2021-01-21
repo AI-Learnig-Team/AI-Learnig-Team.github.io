@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>AI Learning Team - Python - Ветвление</title>
+		<link rel="stylesheet" type="text/css" href="/style/base.css">
+	</head>
+	<body>
+		<header>
+			<h1>Информационный центр AI Learning Team</h1>
+		</header>
+		
+		<content>
+		
+			<div class = "ilustration">
+				<img src="/resourse/index.jpg">
+			</div>
+			
+			<div class = "conspect">
+				<div class="conspect_content">
+					<h2>Ветвление</h2>
+					
+					<p>
+						Ветвление нужны программе когда в ее алгоритме есть действия которые должны быть выполнены, только в зависимости от определенных условии.
+					</p>
+					
+					<h3>1. Реализация</h3>
+					<p>
+						Как и в большинстве языков программирования в Python начало такого ветвления обозначается командой <span class="command">if</span>, 
+						описанием условия и двоеточием на конце.
+					</p>
+					<div class="sourse_code">
+						<span class="keyword">if</span> условие:
+					</div>
+					<p>
+						Что бы обозначить Python содержимое и конец ветвления необходимо код ветвления писать с отступом от уровня основного кода.
+					</p>
+					<div class="sourse_code">
+						<span class="keyword">if</span> условие:<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;код ветвления<br><br>
+						основной код
+					</div>
+					
+					<h3>2. Логические выражения</h3>
+				
+					<p>Для описания условия используются логические операторы.</p>
+					<table>
+						<tbody>
+							<tr>
+								<td>Оператор</td>
+								<td>Значение</td>
+							</tr>
+							<tr>
+								<td>></td>
+								<td>Больше</td>
+							</tr>
+							<tr>
+								<td><</td>
+								<td>Меньше</td>
+							</tr>
+							<tr>
+								<td>>=</td>
+								<td>Больше или равно</td>
+							</tr>
+							<tr>
+								<td><=</td>
+								<td>Меньше или равно</td>
+							</tr>
+							<tr>
+								<td>==</td>
+								<td>Равно</td>
+							</tr>
+							<tr>
+								<td>!=</td>
+								<td>Не равно</td>
+							</tr>
+
+						</tbody>
+					</table>
+					<br>
+					<div class="sourse_code">
+						<span class="keyword">if</span> a &#60; b: <span class="comment">#Если a меньше b</span>
+					</div>
+					<p>
+					Описание условия &laquo;a &#60; b&raquo; называется <span class="term">логическим выражением</span>. Логическое выражение может иметь только два значения: Истина или Ложь. В Python
+					обозначается как <span class="command">True</span> и <span class="command">False</span>. if срабатывает только если выражения в нем принимает значения 
+					True (Правда).
+					</p>
+					<div class="sourse_code">
+						a = <span class="number">2</span><br>
+						b = <span class="number">3</span><br>
+						<br>
+						<span class="keyword">if</span> a &#62; b:<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;код ветвления <span class="comment"># Этот код не выполнится так как выражение равно False</span><br><br>
+						<span class="keyword">if</span> a &#60; b:<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;код ветвления <span class="comment"># Этот код выполнится!</span>
+					</div>
+					
+					<h3>3. Две ветви</h3>
+					<p>
+					Все выше описанное реализует скорее ответвление от основного алгоритма. Для реализации полноценного ветвления так же используется команда 
+					<span class="command">else</span>.В отличие от if ей не требуется логического выражения, ей обозначается начало ветвления которое срабатывает 
+					если выражение в if было False. Тем самым его легко можно заменить в голове на слово иначе.
+					</p>
+					<div class="sourse_code">
+						<span class="keyword">if</span> a &#62; b:<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;код первой ветки<br>
+						<span class="keyword">else</span>:<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;код второй ветки
+					</div>
+				
+					<h3>4. Сложные логические выражения</h3>
+					<p>
+						В некоторых случаях одного условия бывает недостаточно. Соедения нескольких выражении осуществляются специальными операторами 
+						<span class="command">and</span>(И) и <span class="command">or</span>(ИЛИ).
+					</p>
+					<div class="sourse_code">
+						<span class="keyword">if</span> a &#62; b <span class="keyword">and</span> a &#62; c:<span class="comment"># Сработает только если оба выражения истинны</span><br><br>
+						<span class="keyword">if</span> a &#62; b <span class="keyword">or</span> a &#62; c:<span class="comment"># Не сработает только если оба выражения ложны</span>
+					</div>
+					<p>
+						При необходимости инвертировать значения выражения используется оператор <span class="command">not</span>(Не).
+					</p>
+					<div class="sourse_code">
+						<span class="keyword">if</span> <span class="keyword">not</span> a &#62; b: <span class="comment"># Сработает только если выражения ложно</span>
+					</div>
+					
+					<h3>5. Много ветвей</h3>
+					<p>
+					В случаях когда требуется более двух ветвей, используется команда <span class="command">elif</span>. 
+					Данная команда идет после if, но до else и так же как и if требует логического выражения.
+					</p>
+					<div class="sourse_code">
+						<span class="keyword">if</span> a &#62; b <span class="keyword">and</span> a &#62; c:<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;код первой ветки<br>
+						<span class="keyword">if</span> b &#62; a <span class="keyword">and</span> b &#62; c:<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;код второй ветки<br>
+						<span class="keyword">if</span> c &#62; a <span class="keyword">and</span> c &#62; b:<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;код третьи ветки<br>
+						<span class="keyword">else</span>:<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;код четвертой ветки
+					</div>
+					
+					<h3>6. *Еще немного о бинарной логики</h3>
+					<p>
+						Логические выражения, как и математические операции можно сохранять в переменную. Тип такой переменой в Python называется 
+						<span class="command">Boolean</span>. Это тип, как и выражения, может иметь только два значения (True or False, 0 or 1 в числовом представлении).
+					</p>
+					<div class="sourse_code">
+						a = b &#62; c <span class="comment">#При b=2,с=1 a=True</span>
+					</div>
+					
+					<p>
+						Так же выражения могут просто True или False. Что означает что выражение всегда Истинно или Ложно.
+					</p>
+					<div class="sourse_code">
+						<span class="keyword">if</span> <span class="keyword">True</span>: <span class="comment">#Такое ветвление будет исполниться всегда</span><br><br>
+						<span class="keyword">if</span> <span class="keyword">False</span>: <span class="comment">#Такое ветвление будет исполниться никогда</span>
+					</div>
+					
+					<h3>7. *Короткие условия</h3>
+					
+					<p>
+					Если два ветвления состоят из простых однострочных операции, то имеет смысл использовать короткий формат записи.
+					</p>
+					
+					<p>
+					Вместо:
+					</p>
+					<div class="sourse_code">
+						<span class="keyword">if</span> a &#62; b: <br>
+						&nbsp;&nbsp;&nbsp;&nbsp;c = <span class="number">15</span><br>
+						<span class="keyword">else</span>:<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;c = <span class="number">25</span>
+					</div>
+					<p>
+					Можно писать так:
+					</p>
+					<div class="sourse_code">
+						c = <span class="number">15</span> <span class="keyword">if</span> a &#62; b <span class="keyword">else</span> <span class="number">25</span>
+					</div>
+				</div>
+			</div>
+		</content>
+		
+		<footer>
+			<div class = "copy">
+				<span>AI Learning Team &copy; 2021</span>
+			</div>
+			
+			<div class = "logo">
+				<a href="https://www.articles/python.org/"><img src="/logo/python.png"></a>
+			</div>
+		</footer>
+	</body>
+</html>
