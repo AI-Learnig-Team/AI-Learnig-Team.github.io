@@ -20,13 +20,12 @@ body {
 header {
 	border-bottom: solid 1px #a9a1a1;
     height: 80px;
+	align-items: center;
 }
 
 body > * {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 30px;
 	font-size: 20px;
 }
 
@@ -36,11 +35,12 @@ header, h1{
 
 content {
 	justify-content: flex-start;
-	height: calc(100% - 180px);
+	height: calc(100% - 150px);
+	margin-top: 30px;
 }
 
 .ilustration {
-	width: calc(25% - 30px);
+	width: 25%;
     height: 100%;
     background-color: #eeeeee;
     border-radius: 10px;
@@ -52,20 +52,25 @@ content {
 }
 
 .conspect {
-	width: calc(70% - 30px);
+	width: calc(75% - 295px);;
 	height: 100%;
 	overflow: auto;
 	display: flex;
     justify-content: center;
+	margin-left: 30px;
 }
 
 .conspect_content{
 	max-width: 960px;
 }
 
-.ilustration,
-.conspect{
-	margin-left: 30px;
+.topic{
+	width: 205px;
+    margin: 0 30px;
+}
+
+.topic li {
+    margin-top: 10px;
 }
 
 footer {
@@ -82,14 +87,14 @@ a {
 
 ol{
 	padding: 0;
+	list-style:none;
 }
 
-ol li {
+.conspect_content ol li {
     margin-top: 15px;
     border: solid 1px;
     padding: 10px;
     box-shadow: 1px 1px 3px -1px #1C2B8A;
-	list-style: none;
 }
 
 .logo {
@@ -186,6 +191,17 @@ td {
 	
 	.ilustration{
 		margin-left: 0px;
+	}
+	
+	.topic {
+		margin: 0 30px;
+		width: calc(100% - 60px);
+	}
+	
+	.topic li {
+		margin-top: 2px;
+		border: solid 1px;
+		padding: 20px;
 	}
 	
 	li {

@@ -24,22 +24,22 @@
 						Ветвление нужны программе когда в ее алгоритме есть действия которые должны быть выполнены, только в зависимости от определенных условии.
 					</p>
 					
-					<h3>1. Реализация</h3>
+					<h3>4. Сложные логические выражения</h3>
 					<p>
-						Как и в большинстве языков программирования в Python начало такого ветвления обозначается командой <span class="command">if</span>, 
-						описанием условия и двоеточием на конце.
+						В некоторых случаях одного условия бывает недостаточно. Соедения нескольких выражении осуществляются специальными операторами 
+						<span class="command">and</span>(И) и <span class="command">or</span>(ИЛИ).
 					</p>
 					<div class="sourse_code">
-						<span class="keyword">if</span> условие:
+						<span class="keyword">if</span> a &#62; b <span class="keyword">and</span> a &#62; c:<span class="comment"># Сработает только если оба выражения истинны</span><br><br>
+						<span class="keyword">if</span> a &#62; b <span class="keyword">or</span> a &#62; c:<span class="comment"># Не сработает только если оба выражения ложны</span>
 					</div>
 					<p>
-						Что бы обозначить Python содержимое и конец ветвления необходимо код ветвления писать с отступом от уровня основного кода.
+						При необходимости инвертировать значения выражения используется оператор <span class="command">not</span>(Не).
 					</p>
 					<div class="sourse_code">
-						<span class="keyword">if</span> условие:<br>
-						&nbsp;&nbsp;&nbsp;&nbsp;код ветвления<br><br>
-						основной код
+						<span class="keyword">if</span> <span class="keyword">not</span> a &#62; b: <span class="comment"># Сработает только если выражения ложно</span>
 					</div>
+					
 				</div>
 			</div>
 			
